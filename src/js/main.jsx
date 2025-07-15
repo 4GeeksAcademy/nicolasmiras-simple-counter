@@ -8,11 +8,30 @@ import "bootstrap"
 // index.css'
 import '../styles/index.css'
 
-// components
+import '../index.html'
+
+// components 
 import Home from './components/Home';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Home/>
-  </React.StrictMode>,
-)
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+let seconds = 0;
+
+function renderApp() {
+  root.render(
+    <React.StrictMode>
+      <Home value={seconds} />
+    </React.StrictMode>
+  );
+}
+
+renderApp();
+
+setInterval(() => {
+  seconds++;
+  renderApp();
+}, 1000);
+
+
+
+
