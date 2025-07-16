@@ -8,8 +8,6 @@ import "bootstrap"
 // index.css'
 import '../styles/index.css'
 
-import '../index.html'
-
 // components 
 import Home from './components/Home';
 
@@ -24,8 +22,6 @@ function renderApp() {
     </React.StrictMode>
   );
 }
-
-renderApp();
 
 setInterval(() => {
   seconds++;
